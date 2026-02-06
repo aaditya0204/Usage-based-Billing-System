@@ -3,9 +3,7 @@ import express from "express";
 import app from "./app.js";
 import connectDB from "./config/db.js";
 
-dotenv.config({
-  path: "../.env",
-});
+dotenv.config();
 
 connectDB()
   .then(() => {
@@ -19,4 +17,4 @@ connectDB()
   })
   .catch((err) => {
     console.log(" DataBase Connection Failed!! ", err);
-  }); 
+  });

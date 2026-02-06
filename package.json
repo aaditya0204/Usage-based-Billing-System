@@ -6,7 +6,7 @@
     "test": "tests"
   },
   "scripts": {
-    "dev": "nodemon -r dotenv/config src/server.js",
+    "dev": "nodemon -r dotenv/config src/server.js --dotenv=.env",
     "start": "node src/server.js",
     "format": "prettier --write src/**/*.js"
   },
@@ -20,12 +20,15 @@
   "type": "module",
   "description": "",
   "dependencies": {
+    "bcrypt": "^6.0.0",
     "bcryptjs": "^3.0.3",
+    "cloudinary": "^2.9.0",
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.6",
-    "dotenv": "^17.2.3",
+    "dotenv": "^17.2.4",
     "express": "^4.22.1",
     "express-rate-limit": "^8.2.1",
+    "google-auth-library": "^10.5.0",
     "jsonwebtoken": "^9.0.3",
     "mongodb": "^7.1.0",
     "mongoose": "^9.1.6",

@@ -16,4 +16,12 @@ app.use(express.urlencoded({ extended: true, limit: "16kb" }));
 app.use(express.static("public"));
 app.use(cookieParser());
 
+import authRoutes from "./routes/auth.routes.js";
+
+app.use("/auth", authRoutes);
+
+app.get("/", (req, res) => {
+  res.status(200).json({ message: "Server is running" });
+});
+
 export default app;
