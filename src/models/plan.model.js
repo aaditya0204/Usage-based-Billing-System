@@ -8,11 +8,6 @@ const planSchema = new mongoose.Schema(
       unique: true,
       trim: true,
     },
-    productId: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Product",
-      required: true,
-    },
     billingCycle: {
       type: String,
       enum: ["monthly", "yearly"],
@@ -27,10 +22,6 @@ const planSchema = new mongoose.Schema(
       type: Number,
       required: true,
       min: 0,
-    },
-    currency: {
-      type: String,
-      default: "INR",
     },
     active: {
       type: Boolean,

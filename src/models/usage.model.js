@@ -15,18 +15,6 @@ const usageSchema = new Schema(
       type: Number,
       required: true,
     },
-    unit: {
-      type: String,
-      required: true,
-    },
-    unitPrice: {
-      type: Number,
-      required: true,
-    },
-    totalCost: {
-      type: Number,
-      required: true,
-    },
   },
   { timestamps: true }
 );

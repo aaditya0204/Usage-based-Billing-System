@@ -7,18 +7,9 @@ const subscriptionSchema = new mongoose.Schema(
       ref: "User",
       required: true,
     },
-    productId: {
+    planId: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "Product",
-      required: true,
-    },
-    unitPrice: {
-      type: Number,
-      required: true,
-    },
-    billingCycle: {
-      type: String,
-      enum: ["monthly", "yearly"],
+      ref: "Plan",
       required: true,
     },
     startDate: {
@@ -30,7 +21,7 @@ const subscriptionSchema = new mongoose.Schema(
     },
     status: {
       type: String,
-      enum: ["active", "paused", "canceled"],
+      enum: ["active", "paused", "cancelled"],
       default: "active",
     },
   },

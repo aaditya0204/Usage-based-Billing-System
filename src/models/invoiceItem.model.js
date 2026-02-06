@@ -15,11 +15,6 @@ const invoiceItemSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    itemType: {
-      type: String,
-      enum: ["usage", "fixed", "tax", "discount"],
-      required: true,
-    },
     amount: {
       type: Number,
       required: true,

@@ -14,14 +14,6 @@ const productSchema = new mongoose.Schema(
       type: Number,
       required: true,
     },
-    unitName: {
-      type: String,
-      required: true,
-    },
-    active: {
-      type: Boolean,
-      default: true,
-    },
   },
   { timestamps: true }
 );
