@@ -52,22 +52,6 @@ const googleCallback = asyncHandler(async (req, res) => {
   res.redirect("/dashboard");
 });
 
-const registerUser = asyncHandler(async (req, res) => {
-  const { username, email, fullName, password } = req.body;
-  const existingUser = await User.findOne({ $or: [{ email }, { username }] });
-
-  if (existingUser) {
-    throw new ApiError("User with given email or username already exists", 400);
-  }
-
-  const newUser = await User.create({
-    username,
-    email,
-    fullName,
-    password,
-  });
-
-  return res.status(201).json(new ApiResponse(200, newUser, "User registered successfully"));
-});
+ 
 
 export { googleRedirect, googleCallback, registerUser };
